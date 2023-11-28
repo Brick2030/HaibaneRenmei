@@ -25,5 +25,6 @@ label start:
     h "Hello world!"
     h "Testing git stuff"
     h "Sometimes this might be boring"
+    h "New feature to git test 1"
 
     return
