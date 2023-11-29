@@ -1,4 +1,9 @@
+# [ To Do ] #
 1) Smooth effects of character movement from DDLC for example
+	1.1) It will be done configuring transforming.rpy in definitions folder
+
+
+# [ Done ] #
 2) Separate files
 	2.1) File with defs of assets (pictures, music, audio) (research useful feature of characters showing in ddlc again)
 	2.2) File with story.
