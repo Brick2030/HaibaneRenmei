@@ -1,7 +1,8 @@
 # [ To Do ] #
 1) Smooth effects of character movement from DDLC for example
 	1.1) It will be done configuring transforming.rpy in definitions folder
-
+Cant figure it out yet. Work on this feature is in def folder in transforming.rpy 
+Also cant find any use of new files in def folder. Do we even need them? 
 
 # [ Done ] #
 2) Separate files
