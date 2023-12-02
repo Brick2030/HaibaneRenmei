@@ -7,9 +7,11 @@
 # The game starts here.
 
 
-// Testing experimental branch.
+# Testing experimental branch.
 
 
 label start:
+
+# reminder for brick to add different scene for testing tranforming, scenes changes and stuff
 call story
 return
