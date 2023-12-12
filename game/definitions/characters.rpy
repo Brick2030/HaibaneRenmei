@@ -19,3 +19,4 @@ image hikari a2 = "images/characters/hikari/hikari happy.png"
 define hi = Character("Hikari", image="hikari")
 define re = Character("Reki")
 define ra = Character("Rakka")
+define ch = Character("Chie", color="#deddd5")
