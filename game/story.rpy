@@ -4,8 +4,15 @@ label story:
     scene background1
     play music "ost.mp3" fadeout 1
 
-    show chieneutral at centre with dissolve 
+    show chie n at centre with dissolve 
     ch "Hello! I'm Chie."
+
+    ch h "Test 1"
+    ch n "Test 2"
+    ch s "Test 3"
+
+
+
 
     hide chieneutral
 
