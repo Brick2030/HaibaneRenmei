@@ -16,7 +16,7 @@ image hikari a2 = "images/characters/hikari/hikari happy.png"
 # 		show hikari a1 at centre
 # 		hi "Test example
 
-define hi = Character("Hikari", image="hikari")
+define hi = Character("Hikari", image="hikari", ctc="ctc_anchored",ctc_position="fixed")
 define re = Character("Reki")
 define ra = Character("Rakka")
-define ch = Character("Chie", color="#deddd5")
+define ch = Character("Chie", color="#deddd5", ctc="ctc_anchored",ctc_position="fixed")
