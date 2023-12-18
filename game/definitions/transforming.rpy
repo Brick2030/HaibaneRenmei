@@ -36,6 +36,5 @@ transform right2:
 #    makebig
     xalign 1.0
     yalign 1.0
-    TEST
 
 
