@@ -347,22 +347,31 @@ style navigation_button_text:
 ## Used to display the main menu when Ren'Py starts.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
-
+###############################################################################################
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    imagemap:
+        ground "gui/MainMenu/main_menu.png"
+        idle "gui/MainMenu/menu_idle.png"
+        hover "gui/MainMenu/menu_hover.png"
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+        hotspot(100,125,185,65) action Start()
+        hotspot(100,225,185,65) action ShowMenu("load")
+        hotspot(100,320,421,68) action ShowMenu("preferences")
+        hotspot(100,405,195,65) action ShowMenu("about")
+        hotspot(100,620,185,65) action Quit(confirm=True)
+        hotspot(1100,650,185,65) action ShowMenu("help")
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    use navigation
+        
 
+        # 100 125 185 65
+
+    
+    
+    
     if gui.show_name:
 
         vbox:
