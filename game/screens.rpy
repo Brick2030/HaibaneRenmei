@@ -353,6 +353,8 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
+
+    # This thing is main menu. Button cords and stuff. very important. May be changed later.
     imagemap:
         ground "gui/MainMenu/main_menu.png"
         idle "gui/MainMenu/menu_idle.png"
