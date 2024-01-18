@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Haibane Renmei")
+define config.name = _("HaibaneRenmei")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "Demo. Experimental."
+define config.version = "DemoMain"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -45,7 +45,7 @@ Our discord server is https://discord.gg/ztT3hbEkHX
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "HaibaneRenmeiDemo"
+define build.name = "HaibaneRenmei"
 
 
 ## Sounds and music ############################################################
@@ -188,6 +188,8 @@ init python:
 
     build.classify('**~', None)
     build.classify('**.bak', None)
+    build.classify('**.md', None)
+    build.classify('**.kra', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
@@ -195,6 +197,7 @@ init python:
     build.classify('**/game/cache', None)
     build.classify('**/game/saves', None)
     build.classify('**/traceback.txt', None)
+    build.classify('**/ToDoList', None)
     
 
 
@@ -203,9 +206,12 @@ init python:
 
     build.classify('game/**.png', 'sprites')
     build.classify('game/**.jpg', 'sprites')
+    build.classify('game/**.gif', 'sprites')
     build.classify('game/**.rpy', 'scripts')
     build.classify('game/**.ogg', 'audio')
+    build.classify('game/**.mp3', 'audio')
     build.classify('game/**.ogv', 'audio')
+    build.classify('game/**.ttf', 'fonts')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
