@@ -45,7 +45,7 @@ Our discord server is https://discord.gg/ztT3hbEkHX
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "HaibaneRenmei"
+define build.name = "HaibaneRenmeiDemo"
 
 
 ## Sounds and music ############################################################
@@ -191,17 +191,27 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('**.txt', None)
+    build.classify('**/game/cache')
+    build.classify('**/game/saves')
+    build.classify('**/traceback.txt')
+    
+
+
 
     ## To archive files, classify them as 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.png', 'sprites')
+    build.classify('game/**.jpg', 'sprites')
+    build.classify('game/**.rpy', 'scripts')
+    build.classify('game/**.ogg', 'audio')
+    build.classify('game/**.ogv', 'audio')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
 
     build.documentation('*.html')
-    build.documentation('*.txt')
+    #build.documentation('*.txt')
 
 
 ## A Google Play license key is required to perform in-app purchases. It can be
