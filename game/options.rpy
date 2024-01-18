@@ -192,9 +192,9 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
     build.classify('**.txt', None)
-    build.classify('**/game/cache')
-    build.classify('**/game/saves')
-    build.classify('**/traceback.txt')
+    build.classify('**/game/cache', None)
+    build.classify('**/game/saves', None)
+    build.classify('**/traceback.txt', None)
     
 
 
