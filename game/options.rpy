@@ -30,13 +30,21 @@ define config.version = "DemoMain"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-Devteam [placeholder - add more people]
+Credits:
 
 Brick
-
+Claire
+Hæbermani
+JuneforJosh
+Chiffon of the Blue Sky
+superhenryjones
+Hayley
+Cassandra
+kinabinga
+Dan Fingerman
+Haze
+spark
 Our discord server is https://discord.gg/ztT3hbEkHX
-
-
 
 """)
 
