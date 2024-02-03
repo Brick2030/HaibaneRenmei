@@ -26,8 +26,8 @@ image hama s = "/images/characters/hama/hama sad.png"
 # 		show hikari a1 at centre
 # 		hi "Test example
 
-define hi = Character("Hikari", image="hikari", ctc="ctc_anchored",ctc_position="fixed")
+define hi = Character("Hikari", image="hikari", color="#8cf2e2", ctc="ctc_anchored",ctc_position="fixed")
 define re = Character("Reki")
 define ra = Character("Rakka")
 define ch = Character("Chie", image="chie", color="#deddd5", ctc="ctc_anchored",ctc_position="fixed")
-define ha = Character("Hama", image="hama", ctc="ctc_anchored",ctc_position="fixed")
+define ha = Character("Hama", image="hama", color="#a2f285", ctc="ctc_anchored",ctc_position="fixed")
