@@ -13,6 +13,11 @@ image chie n = "/images/characters/chie/chie neutral.png"
 image chie h = "/images/characters/chie/chie happy.png"
 image chie s = "/images/characters/chie/chie sad.png"
 
+image hama n = "/images/characters/hama/hama neutral.png"
+image hama h = "/images/characters/hama/hama happy.png"
+image hama s = "/images/characters/hama/hama sad.png"
+
+
 
 # image=hikari takes that "hikari" from above line, and I we can use a1 and a2 tags in dialogue to represent different emotions
 # example:
@@ -21,7 +26,8 @@ image chie s = "/images/characters/chie/chie sad.png"
 # 		show hikari a1 at centre
 # 		hi "Test example
 
-define hi = Character("Hikari", image="hikari", ctc="ctc_anchored",ctc_position="fixed")
+define hi = Character("Hikari", image="hikari", color="#8cf2e2", ctc="ctc_anchored",ctc_position="fixed")
 define re = Character("Reki")
 define ra = Character("Rakka")
 define ch = Character("Chie", image="chie", color="#deddd5", ctc="ctc_anchored",ctc_position="fixed")
+define ha = Character("Hama", image="hama", color="#a2f285", ctc="ctc_anchored",ctc_position="fixed")

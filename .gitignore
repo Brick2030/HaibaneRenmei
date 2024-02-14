@@ -1,0 +1,12 @@
+
+*.rpyc
+
+*.png
+
+errors.txt
+
+game/saves/
+
+game/cache/
+
+traceback.txt
