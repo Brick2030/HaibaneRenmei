@@ -206,6 +206,7 @@ init python:
     build.classify('**/game/saves', None)
     build.classify('**/traceback.txt', None)
     build.classify('**/ToDoList', None)
+    build.classify('**/.gitignore', None)
     
 
 
