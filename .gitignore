@@ -10,3 +10,7 @@ game/saves/
 game/cache/
 
 traceback.txt
+
+/.vscode
+
+log.txt
