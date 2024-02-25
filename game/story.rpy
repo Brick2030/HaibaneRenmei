@@ -1,4 +1,5 @@
 label story:
+    
     stop music fadeout 1
 
     scene background1

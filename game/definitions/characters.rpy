@@ -29,5 +29,5 @@ image hama s = "/images/characters/hama/hama sad.png"
 define hi = Character("Hikari", image="hikari", ctc="ctc_anchored",ctc_position="fixed")
 define re = Character("Reki")
 define ra = Character("Rakka")
-define ch = Character("Chie", image="chie", color="#deddd5", ctc="ctc_anchored",ctc_position="fixed")
-define ha = Character("Hama", image="hama", ctc="ctc_anchored",ctc_position="fixed")
+define ch = Character("Chie", image="chie", color="#ffffff", ctc="ctc_anchored",ctc_position="fixed")
+define ha = Character("Hama", image="hama", color="#ffffff", ctc="ctc_anchored",ctc_position="fixed")

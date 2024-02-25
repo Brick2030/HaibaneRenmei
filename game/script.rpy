@@ -9,6 +9,9 @@
 
 # Testing experimental branch.
 
+image background_video = Movie(size =(1600,900), channel="movie", play="gui/MainMenu/main_menu.ogv", loop=True)
+
+
 
 image continue_feather:
     "gui/feather/frame_00.png"
@@ -78,6 +81,6 @@ screen ctc_screen:
 
 label start:
 
-# reminder for brick to add different scene for testing tranforming, scenes changes and stuff
+
 call story
 return

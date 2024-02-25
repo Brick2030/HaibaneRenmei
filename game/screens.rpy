@@ -276,6 +276,18 @@ style quick_button_text:
     properties gui.button_text_properties("quick_button")
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ################################################################################
 ## Main and Game Menu Screens
 ################################################################################
@@ -342,7 +354,72 @@ style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
 
 
+
+
 ## Main Menu screen ############################################################
+
+init python:
+    import pygame
+    import math
+
+
+    class TrackCursor(renpy.Displayable):
+
+        def __init__(self, child, paramod, **kwargs):
+
+            super(TrackCursor, self).__init__()
+
+            self.child = renpy.displayable(child)
+            self.x = 0
+            self.y = 0
+            self.actual_x = 0
+            self.actual_y = 0
+
+            self.paramod = paramod
+            self.last_st = 0
+
+
+
+        def render(self, width, height, st, at):
+
+            rv = renpy.Render(width, height)
+            minimum_speed = 0.5
+            maximum_speed = 3
+            speed = 1 + minimum_speed
+            mouse_distance_x = min(maximum_speed, max(minimum_speed, (self.x - self.actual_x)))
+            mouse_distance_y = (self.y - self.actual_y)
+            if self.x is not None:
+                st_change = st - self.last_st
+
+                self.last_st = st
+                self.actual_x = self.x
+                self.actual_y = self.y
+
+
+                if mouse_distance_y <= minimum_speed:
+                    mouse_distance_y = minimum_speed
+                elif mouse_distance_y >= maximum_speed:
+                    mouse_distance_y = maximum_speed
+
+                cr = renpy.render(self.child, width, height, st, at)
+                cw, ch = cr.get_size()
+                rv.blit(cr, (self.actual_x, self.actual_y))
+
+
+
+            renpy.redraw(self, 0)
+            return rv
+
+        def event(self, ev, x, y, st):
+            hover = ev.type == pygame.MOUSEMOTION
+            click = ev.type == pygame.MOUSEBUTTONDOWN
+            mousefocus = pygame.mouse.get_focused()
+            if hover:
+
+                if (x != self.x) or (y != self.y) or click:
+                    self.x = -x /self.paramod
+                    self.y = -y /self.paramod
+
 ##
 ## Used to display the main menu when Ren'Py starts.
 ##
@@ -350,13 +427,14 @@ style navigation_button_text:
 ###############################################################################################
 screen main_menu():
 
+    add TrackCursor("background_video", 20)
+
     ## This ensures that any other menu screen is replaced.
     tag menu
 
 
     # This thing is main menu. Button cords and stuff. very important. May be changed later.
     imagemap:
-        ground "gui/MainMenu/main_menu.png"
         idle "gui/MainMenu/menu_idle.png"
         hover "gui/MainMenu/menu_hover.png"
 
