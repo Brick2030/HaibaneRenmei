@@ -1,5 +1,5 @@
 label story:
-    
+    # Init of exp2 branch.
     stop music fadeout 1
 
     scene background1
